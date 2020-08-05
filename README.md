@@ -19,11 +19,11 @@ To run the code over examples from the OGB benchmark, go to the linkpropprod dir
 and follow the README file in that folder.
 
 ## Citation
-@misc{puny2020graph,
-    title={From Graph Low-Rank Global Attention to 2-FWL Approximation},
-    author={Omri Puny and Heli Ben-Hamu and Yaron Lipman},
-    year={2020},
-    eprint={2006.07846},
-    archivePrefix={arXiv},
-    primaryClass={cs.LG}
-}
+    @misc{puny2020graph,
+        title={From Graph Low-Rank Global Attention to 2-FWL Approximation},
+        author={Omri Puny and Heli Ben-Hamu and Yaron Lipman},
+        year={2020},
+        eprint={2006.07846},
+        archivePrefix={arXiv},
+        primaryClass={cs.LG}
+    }
