@@ -268,7 +268,10 @@ def main():
     emb = torch.nn.Embedding(data.num_nodes, args.hidden_channels).to(device)
     predictor = LinkPredictor(args.hidden_channels, args.hidden_channels, 1,
                               args.num_layers, args.dropout).to(device)
-
+    print("model parameters {}".format(sum(p.numel() for p in model.parameters())))
+    print("predictor parameters {}".format(sum(p.numel() for p in predictor.parameters())))
+    print("total parameters {}".format(data.num_nodes*args.hidden_channels + 
+    sum(p.numel() for p in model.parameters())+sum(p.numel() for p in predictor.parameters())))
     evaluator = Evaluator(name='ogbl-ddi')
     loggers = {
         'Hits@10': Logger(args.runs, args),

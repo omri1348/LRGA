@@ -263,7 +263,9 @@ def main():
 
     predictor = LinkPredictor(args.hidden_channels, args.hidden_channels, 1,
                               args.num_layers, args.dropout).to(device)
-
+    print("model parameters {}".format(sum(p.numel() for p in model.parameters())))
+    print("predictor parameters {}".format(sum(p.numel() for p in predictor.parameters())))
+    print("total parameters {}".format(sum(p.numel() for p in model.parameters())+sum(p.numel() for p in predictor.parameters())))
     evaluator = Evaluator(name='ogbl-collab')
     loggers = {
         'Hits@10': Logger(args.runs, args),
